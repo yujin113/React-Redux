@@ -1,7 +1,8 @@
+import React from "react";
 import AddNumber from "../components/AddNumber";
 import store from "../store";
 
-function container() {
+function Container() {
   return (
     <AddNumber
       onClick={size => {
@@ -11,4 +12,4 @@ function container() {
   );
 }
 
-export default container;
+export default Container;

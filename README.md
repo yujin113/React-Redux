@@ -40,3 +40,5 @@ AddNumber 컴포넌트를 감싸서 redux 작업을 실질적으로 처리하는
 
 container component를 만들어서 그것이 redux와 상호작용하게 만듦  
 그 밑에 있는 AddNumber는 redux의 기능을 도려내고 부품으로써 가치를 가진 component로 변경함
+
+DisplayNumber도 위와 똑같이 wrapping하여 수정!

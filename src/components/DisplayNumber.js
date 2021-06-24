@@ -1,15 +1,6 @@
-import React, { useState, useEffect } from "react";
-import store from "../store";
+import React from "react";
 
-function DisplayNumber() {
-  const [number, setNumber] = useState(store.getState().number);
-
-  useEffect(() => {
-    store.subscribe(() => {
-      setNumber(store.getState().number);
-    });
-  }, [number]);
-
+function DisplayNumber({ number }) {
   return (
     <div>
       <h1>Display Number</h1>

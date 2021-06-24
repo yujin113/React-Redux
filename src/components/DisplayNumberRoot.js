@@ -1,5 +1,5 @@
 import React from "react";
-import DisplayNumber from "./DisplayNumber";
+import DisplayNumber from "../containers/DisplayNumber";
 
 function DisplayNumberRoot() {
   return (
