@@ -47,26 +47,19 @@ DisplayNumber도 위와 똑같이 wrapping하여 수정!
 
 react-redux를 도입하면 container component를 쉽게 만들 수 있다
 
-`connect()`를 실행하면 리턴값이 함수고, 리턴된 함수를 다시 실행하는 것을 통해 만들어진 값을 export한다
-
-→ 수동으로 했었던 wrapping component를 만드는 것과 똑같은 역할. wrapping component가 리턴되게 될 것
-
+`connect()`를 실행하면 리턴값이 함수고, 리턴된 함수를 다시 실행하는 것을 통해 만들어진 값을 export한다  
+→ 수동으로 했었던 wrapping component를 만드는 것과 똑같은 역할. wrapping component가 리턴되게 될 것  
 → DisplayNumberRoot에서 전달한 props를 DisplayNumber로 자동 전달해줌 (따로 코드를 작성해서 넘겨주지 않아도 됨)
 
 ```jsx
 connect(mapStateToProps, mapDispatchToProps)() { }
 ```
 
-`mapStateToProps`는 redux의 state를 react의 props로 연결시켜주는 역할
-
-→ redux에서 store의 값이 변경될 때마다 함수 호출되도록 약속되어 있음
-
-→ 호출될 때마다 store의 state 값이 인자로 전달됨
-
+`mapStateToProps`는 redux의 state를 react의 props로 연결시켜주는 역할  
+→ redux에서 store의 값이 변경될 때마다 함수 호출되도록 약속되어 있음  
+→ 호출될 때마다 store의 state 값이 인자로 전달됨  
 → connect에서 return 하는 컴포넌트에 들어갈 {props 이름 : 공급될 값} 전달
 
-`mapDispatchToProps`는 redux의 dispatch를 react의 props로 연결시켜주는 역할
-
-→ 호출될 때 dispatch를 인자로 받아 store.dispatch API를 공급해줌
-
+`mapDispatchToProps`는 redux의 dispatch를 react의 props로 연결시켜주는 역할  
+→ 호출될 때 dispatch를 인자로 받아 store.dispatch API를 공급해줌  
 → 따로 store을 import 할 필요 없다
